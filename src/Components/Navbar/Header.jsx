@@ -1,3 +1,4 @@
+// Header.jsx
 import React, { useState } from "react";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
@@ -9,13 +10,9 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { GiInfo } from "react-icons/gi";
 
-
 import { useCart } from "../../context/CartContext";
-
 import { useWishlist } from "../../context/WishlistContext";
-
 import { useAuth } from "../../context/AuthContext";
-
 import { allProducts } from "../../stores/data/allProducts";
 
 const categories = [
@@ -38,18 +35,15 @@ function Header() {
   const [categoryPath, setCategoryPath] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-
   const { cartItems } = useCart();
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const cartTotal = cartItems
     .reduce((sum, item) => sum + item.price * item.quantity, 0)
     .toFixed(2);
 
-  // wishlist data
   const { wishlist } = useWishlist();
   const wishlistCount = wishlist.length;
 
-  // auth data (from first header)
   const auth = useAuth();
   const user = auth?.user;
   const logout = auth?.logout;
@@ -177,16 +171,43 @@ function Header() {
           <span>+91 7093541427 | +91 8978541427</span>
         </div>
         <div className="nav-top-right">
-          <a href="#">f</a>
-          <a href="#">t</a>
-          <a href="#">in</a>
-          <a href="#">p</a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit our Facebook page"
+          >
+            f
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit our Twitter profile"
+          >
+            t
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit our LinkedIn profile"
+          >
+            in
+          </a>
+          <a
+            href="https://pinterest.com"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit our Pinterest profile"
+          >
+            p
+          </a>
         </div>
       </div>
 
       {/* MIDDLE BAR */}
       <div className="nav-middle-bar">
-        
         <div className="nav-logo" onClick={() => navigate("/")}>
           <img
             src="/img/logo.png"
@@ -205,7 +226,6 @@ function Header() {
           />
         </div>
 
-        {/* RIGHT ICONS */}
         <div className="nav-right-icons">
           <button
             type="button"
@@ -231,7 +251,6 @@ function Header() {
 
           <span className="nav-price">Rs.{cartTotal}</span>
 
-          
           {user ? (
             <div className="nav-profile-wrapper">
               <div
@@ -271,12 +290,10 @@ function Header() {
       {/* BOTTOM BAR */}
       <nav className="nav-bottom-bar">
         <div className="nav-left-block">
-          
           <button className="nav-menu-btn" onClick={toggleMobileMenu}>
             ☰
           </button>
 
-         
           <select
             className="nav-bottom-category-select"
             onChange={handleCategoryChange}
@@ -298,7 +315,6 @@ function Header() {
           </select>
         </div>
 
-        {/* Always visible, but smaller on small screens via CSS */}
         <ul className="nav-links">
           <li onClick={() => handleNavClick("/")}>
             <IoHomeOutline /> HOME
@@ -315,7 +331,7 @@ function Header() {
         </ul>
       </nav>
 
-      {/* MOBILE DRAWER – ONLY All Categories */}
+      {/* MOBILE DRAWER */}
       <div
         className={`mobile-nav-drawer ${
           isMobileMenuOpen ? "mobile-nav-drawer--open" : ""

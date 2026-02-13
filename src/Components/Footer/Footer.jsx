@@ -1,9 +1,10 @@
+// Footer.jsx
 import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
   FaTwitter,
-  FaPinterestP
+  FaPinterestP,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -13,7 +14,6 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Logo + Address */}
         <div className="footer-col">
           <div className="footer-logo">
             <Link to="/" className="footer-logo-link">
@@ -34,36 +34,74 @@ export default function Footer() {
           </p>
 
           <div className="social-icons">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaTwitter /></a>
-            <a href="#"><FaPinterestP /></a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Visit our Facebook page"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Visit our Instagram profile"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Visit our Twitter profile"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="https://pinterest.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Visit our Pinterest profile"
+            >
+              <FaPinterestP />
+            </a>
           </div>
         </div>
 
-        {/* Information */}
         <div className="footer-col">
           <h3>Information</h3>
           <ul>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/checkoutpage">Checkout</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/shop">Shop</Link></li>
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link to="/checkoutpage">Checkout</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link to="/shop">Shop</Link>
+            </li>
           </ul>
         </div>
 
-        {/* My Account */}
         <div className="footer-col">
           <h3>My Account</h3>
           <ul>
-            <li><Link to="/loginpage">My Account</Link></li>
-            
-            <li><Link to="/cart">Shopping Cart</Link></li>
-            <li><Link to="/wishlist">wishlist</Link></li>
+            <li>
+              <Link to="/loginpage">My Account</Link>
+            </li>
+            <li>
+              <Link to="/cart">Shopping Cart</Link>
+            </li>
+            <li>
+              <Link to="/wishlist">wishlist</Link>
+            </li>
           </ul>
         </div>
 
-        {/* Newsletter */}
         <div className="footer-col">
           <h3>Join Our Newsletter Now</h3>
           <p>Get E-mail updates about our latest shop and special offers.</p>
@@ -75,7 +113,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Copyright */}
       <div className="footer-bottom">
         <p>Copyright ©2025 All rights reserved</p>
       </div>

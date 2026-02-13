@@ -8,7 +8,9 @@ const CheckoutPage = () => {
   const navigate = useNavigate();
 
   // array of items sent from Cartpage
-  const cartItems = location.state?.cartItems || [];
+  const cartItemsFromLocation = location.state?.cartItems || [];
+
+  const cartItems = useMemo(() => cartItemsFromLocation, [cartItemsFromLocation]);
 
   const [billing, setBilling] = useState({
     firstName: "",
@@ -43,8 +45,6 @@ const CheckoutPage = () => {
       alert("Please select a payment method");
       return;
     }
-
-    // here you could also validate billing fields again if needed
 
     setLoading(true);
 
