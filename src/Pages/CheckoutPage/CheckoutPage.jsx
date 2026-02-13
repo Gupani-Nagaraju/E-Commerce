@@ -7,8 +7,8 @@ const CheckoutPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // array of items sent from Cartpage
-  const cartItems = location.state?.cartItems || [];
+  // raw items from router state (can be undefined)
+  const rawCartItems = location.state?.cartItems;
 
   const [billing, setBilling] = useState({
     firstName: "",
@@ -51,19 +51,25 @@ const CheckoutPage = () => {
     }, 2000);
   };
 
-  // subtotal & total from cart with 2 decimals
-  const { subtotal, total } = useMemo(() => {
-    const sub = cartItems.reduce(
+  // cartItems + subtotal & total, all in one memo
+  const { cartItems, subtotal, total } = useMemo(() => {
+    const items = rawCartItems || [];
+    const sub = items.reduce(
       (sum, item) => sum + item.price * item.quantity,
       0
     );
     const fixed = Number(sub.toFixed(2));
-    return { subtotal: fixed, total: fixed };
-  }, [cartItems]);
+    return {
+      cartItems: items,
+      subtotal: fixed,
+      total: fixed,
+    };
+  }, [rawCartItems]);
 
   return (
     <section className="checkout-page">
       <form className="checkout-layout" onSubmit={handleSubmit}>
+        {/* BILLING CARD */}
         <div className="card billing-card">
           <div className="checkout-login">
             <a href="/Loginpage">Click Here To Login</a>
@@ -184,6 +190,7 @@ const CheckoutPage = () => {
           </label>
         </div>
 
+        {/* ORDER SUMMARY CARD */}
         <div className="card order-card">
           <h3>Your Order</h3>
 
