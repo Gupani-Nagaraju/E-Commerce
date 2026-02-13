@@ -8,9 +8,7 @@ const CheckoutPage = () => {
   const navigate = useNavigate();
 
   // array of items sent from Cartpage
-  const cartItemsFromLocation = location.state?.cartItems || [];
-
-  const cartItems = useMemo(() => cartItemsFromLocation, [cartItemsFromLocation]);
+  const cartItems = location.state?.cartItems || [];
 
   const [billing, setBilling] = useState({
     firstName: "",
@@ -48,7 +46,6 @@ const CheckoutPage = () => {
 
     setLoading(true);
 
-    // simulate placing order, then go to success page
     setTimeout(() => {
       navigate("/order-success");
     }, 2000);
@@ -61,13 +58,12 @@ const CheckoutPage = () => {
       0
     );
     const fixed = Number(sub.toFixed(2));
-    return { subtotal: fixed, total: fixed }; // add shipping/tax to total if needed
+    return { subtotal: fixed, total: fixed };
   }, [cartItems]);
 
   return (
     <section className="checkout-page">
       <form className="checkout-layout" onSubmit={handleSubmit}>
-        {/* BILLING CARD */}
         <div className="card billing-card">
           <div className="checkout-login">
             <a href="/Loginpage">Click Here To Login</a>
@@ -75,7 +71,6 @@ const CheckoutPage = () => {
 
           <h3>Billing Details</h3>
 
-          {/* FIRST & LAST NAME */}
           <div className="row-2">
             <div>
               <label>First Name *</label>
@@ -133,7 +128,6 @@ const CheckoutPage = () => {
             onChange={handleChange}
           />
 
-          {/* ZIP & CITY */}
           <div className="row-2">
             <div>
               <label>ZIP</label>
@@ -156,7 +150,6 @@ const CheckoutPage = () => {
             </div>
           </div>
 
-          {/* EMAIL & PHONE */}
           <div className="row-2">
             <div>
               <label>Email *</label>
@@ -180,7 +173,6 @@ const CheckoutPage = () => {
             </div>
           </div>
 
-          {/* CREATE ACCOUNT */}
           <label className="create-account">
             <input
               type="checkbox"
@@ -192,7 +184,6 @@ const CheckoutPage = () => {
           </label>
         </div>
 
-        {/* ORDER SUMMARY CARD */}
         <div className="card order-card">
           <h3>Your Order</h3>
 
