@@ -1,0 +1,128 @@
+.searchbar-wrapper {
+  display: flex;
+  flex: 1;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  overflow: visible;
+  background: #ffffff;
+}
+
+
+.searchbar-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.searchbar-input {
+  width: 100%;
+  border: none;
+  padding: 0 16px;
+  font-size: 14px;
+  height: 100%;
+  line-height: 46px;
+  color: #111827;
+  box-sizing: border-box;
+}
+
+.searchbar-input::placeholder {
+  color: #9ca3af;
+}
+
+.searchbar-input:focus {
+  outline: none;
+}
+
+/* search icon button */
+.searchbar-btn {
+  width: 52px;
+  border: none;
+  background: #7b1fa2;
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.searchbar-btn:hover {
+  background: #6d28d9;
+}
+
+.searchbar-btn:active {
+  transform: scale(0.96);
+}
+
+/* dropdown suggestions */
+.searchbar-suggestions {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  right: 0;
+  max-height: 260px;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  z-index: 200;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+}
+
+.searchbar-suggestions li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #111827;
+  background: #ffffff;
+}
+
+.searchbar-suggestions li:nth-child(2n) {
+  background: #f9fafb;
+}
+
+.searchbar-suggestions li:hover {
+  background: #ede9fe;
+}
+
+.suggestion-name {
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.suggestion-section {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #6d28d9;
+  font-weight: 600;
+}
+
+
+.searchbar-no-suggestions {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  right: 0;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: #6b7280;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  z-index: 200;
+}
+
+/* small screens */
+@media (max-width: 640px) {
+  .searchbar-wrapper {
+    width: 100%;
+  }
+}

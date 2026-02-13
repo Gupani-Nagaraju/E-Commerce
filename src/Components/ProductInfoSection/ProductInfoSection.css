@@ -1,0 +1,161 @@
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;              
+  max-width: 480px;      
+}
+ 
+
+.product-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+ 
+
+
+
+.product-author {
+  font-size: 13px;
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+ 
+
+
+.product-company {
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+  margin: 0;
+}
+ 
+
+
+
+.product-model {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+ 
+
+
+
+.product-info .desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.45;     
+  margin-top: 6px;
+}
+ 
+
+
+
+.product-info .price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff6500;
+  margin: 6px 0;
+}
+ 
+
+
+
+.variant {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+ 
+.variant label {
+  font-weight: 500;
+  font-size: 14px;
+}
+ 
+.variant select {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+ 
+
+/* QUANTITY */
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+ 
+.quantity button {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+}
+ 
+.quantity span {
+  min-width: 22px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+ 
+
+/* ACTION BUTTONS */
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+ 
+.add-cart,
+.buy-now {
+  flex: 1;
+  padding: 11px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+}
+ 
+/* ADD TO CART */
+.add-cart {
+  background: #ff6500;
+  color: #fff;
+}
+ 
+/* BUY NOW */
+.buy-now {
+  background: #222;
+  color: #fff;
+}
+ 
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+  .product-info {
+    max-width: 100%;
+  }
+ 
+  .product-title {
+    font-size: 22px;
+  }
+ 
+  .actions {
+    flex-direction: column;
+  }
+}

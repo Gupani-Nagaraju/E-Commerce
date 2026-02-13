@@ -1,0 +1,87 @@
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+.sort-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.sort-section select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+
+.pagesection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.books {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: 0.3s ease-in-out;
+  border: 1px solid #eee;
+}
+
+.books:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  border-color: #ff7b00;
+}
+
+.pageimg {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.pageimg img {
+  max-width: 80%;
+  transition: 0.3s;
+}
+
+.pageimg img:hover {
+  transform: scale(1.07);
+}
+
+.promodel {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6500;
+}
+
+.buybtn {
+  width: 100%;
+  background: #ff6500;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.buybtn:hover {
+  background: #e45a00;
+  transform: translateY(-2px);
+}

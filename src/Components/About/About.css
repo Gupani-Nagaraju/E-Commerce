@@ -1,0 +1,154 @@
+
+.breacrumb-section {
+  padding: 18px 0;
+  background: #f6f6f6;
+}
+
+.breadcrumb-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.breadcrumb-text a {
+  color: #333;
+  margin-right: 10px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.breadcrumb-text a:hover {
+  color: #e53637;
+}
+
+.breadcrumb-text span {
+  font-size: 14px;
+  color: #777;
+}
+
+.about-section {
+  position: relative;
+  background-image: url("https://i.ibb.co/LXGpqs3K/image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.70); 
+  pointer-events: none;
+}
+
+
+.about-section .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;       
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+
+.about-title h2 {
+  font-weight: 800;
+  font-size: 36px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.about-title p {
+  color: #777;
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  color: #555;
+  text-align: center;
+}
+
+.about-highlights {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.about-box {
+  flex: 1;
+  min-width: 250px;
+  background: #f9f9f9;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+  border: 1px solid #eee;
+}
+
+.about-box h5 {
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.about-box p {
+  font-size: 14px;
+  color: #666;
+}
+
+.about-box:hover {
+  background: #e53637;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.about-box:hover p {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 0;
+  }
+
+  .about-section .container {
+    padding: 30px 16px;
+  }
+
+  .about-title h2 {
+    font-size: 28px;
+  }
+
+  .about-title p {
+    font-size: 16px;
+  }
+
+  .about-highlights {
+    flex-direction: column;
+  }
+}

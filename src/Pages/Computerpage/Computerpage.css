@@ -1,0 +1,392 @@
+
+.computer-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6fb;
+}
+
+
+.computer-filter-sidebar {
+  width: 260px;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  padding: 20px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.computer-filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.computer-filter-header h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.computer-close-filter {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.computer-filter-section {
+  margin-bottom: 20px;
+}
+
+.computer-filter-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Single price slider */
+.computer-single-price-range-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.computer-single-price-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.computer-single-price-range-input {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  outline: none;
+  cursor: pointer;
+}
+
+/* WebKit track */
+.computer-single-price-range-input::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+
+.computer-single-price-range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0f766e;
+  border: 2px solid #ecfeff;
+  margin-top: -6px;
+}
+
+
+.computer-single-price-range-input::-moz-range-track {
+  height: 4px;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+/* Firefox thumb */
+.computer-single-price-range-input::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0f766e;
+  border: 2px solid #ecfeff;
+}
+
+.computer-single-price-display {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #475569;
+}
+
+
+.computer-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.computer-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.computer-checkbox-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.computer-checkbox-row span {
+  line-height: 1.4;
+}
+
+/* Reset button */
+.computer-reset-btn {
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #0f766e;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Main */
+.computer-main {
+  flex: 1;
+  padding: 20px;
+}
+
+.computer-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.computer-top-bar h1 {
+  margin: 0;
+}
+
+.computer-results-text {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+
+.sort-section select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+
+.pagesection-computer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 10px 0 20px;
+}
+
+.computer-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: 0.3s ease-in-out;
+  border: 1px solid #eee;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.computer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  border-color: #ff7b00;
+}
+
+/* Image */
+.pageimg {
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1; 
+}
+
+.pageimg img {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Text */
+.promodel {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6500;
+  margin-bottom: 8px;
+}
+
+/* No results */
+.computer-no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #64748b;
+  padding: 40px 0;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.addcartbtn,
+.buybtn {
+  flex: 1;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+}
+
+.addcartbtn {
+  background-color: #ff9f00;
+  margin-top: 12px;
+}
+
+.buybtn {
+  background-color: #fb641b;
+}
+
+.addcartbtn:hover,
+.buybtn:hover {
+  opacity: 0.9;
+}
+
+/* Wishlist icon  */
+.wishlist-icon {
+  position: absolute;
+  top: 14px;      
+  right: 14px;    
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.wishlist-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.wishlist-icon:active {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+/* Mobile filter button + overlay */
+.computer-mobile-filter-btn {
+  display: none;
+}
+
+.computer-filters-overlay {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pagesection-computer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .computer-wrapper {
+    flex-direction: column;
+  }
+
+  .computer-filter-sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    height: 100vh;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .computer-filter-sidebar.open {
+    left: 0;
+  }
+
+  .computer-close-filter {
+    display: inline-flex;
+  }
+
+  .computer-mobile-filter-btn {
+    display: inline-flex;
+    margin: 10px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: none;
+    background: #0f766e;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .computer-filters-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    z-index: 999;
+  }
+
+  .computer-main {
+    padding: 16px;
+  }
+
+  .computer-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pagesection-computer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .pagesection-computer {
+    grid-template-columns: 1fr;
+  }
+}

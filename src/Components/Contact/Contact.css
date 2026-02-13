@@ -1,0 +1,177 @@
+.breacrumb-section {
+  padding: 15px 0;
+  background: #f3f3f3;
+}
+
+.breadcrumb-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.breadcrumb-text a {
+  color: #333;
+  margin-right: 10px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.breadcrumb-text a:hover {
+  color: #e53637;
+}
+
+.breadcrumb-text span {
+  font-size: 14px;
+  color: #888;
+}
+
+
+.contact-hero {
+  width: 100%;
+}
+
+.contact-map-wrapper {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.contact-map-iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+.contact-card {
+  width: 100%;
+  background: #ffffff;
+  padding: 32px 26px;
+}
+
+
+.contact-card > .row {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* titles */
+.contact-title h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+.contact-title p {
+  color: #777;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* widgets */
+.contact-widget .cw-item {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.ci-icon {
+  font-size: 30px;
+  color: #e53637;
+  margin-right: 20px;
+}
+
+.ci-text span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.ci-text p {
+  margin: 0;
+  line-height: 24px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* form */
+.contact-form {
+  margin-left: -10px;
+}
+
+.contact-form .leave-comment h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.contact-form .leave-comment p {
+  margin-bottom: 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  border-color: #e53637;
+}
+
+.comment-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Button */
+.site-btn {
+  background: #e53637;
+  color: #fff;
+  padding: 10px 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.site-btn:hover {
+  background: #c92c2d;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .contact-card {
+    padding: 24px 16px;
+  }
+
+  .contact-card > .row {
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-form {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-map-wrapper {
+    height: 320px;
+  }
+}
